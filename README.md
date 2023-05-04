@@ -1,4 +1,4 @@
-# SoftUni - Python Web Frameqork - June 2023
+# SoftUni - Python Web Framework - June 2023
 
 In this repository there are solutions to tasks from the Python Web Framework of the software academy of SoftUni University.
 
