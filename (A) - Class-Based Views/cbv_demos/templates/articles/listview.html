@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ListView</title>
+</head>
+
+<body>
+    <a href="{% url 'create view' %}">Create</a>
+
+    <form action="{% url 'list view' %}?page={{ page_obj.number }}">
+        <input name="search" value="{{ search }}">
+        <button>Search by title</button>
+    </form>
+
+    <ul>
+        {% for article_object in all_article_objects %}
+            <li>
+                <a href="{% url 'detail view' pk=article_object.pk %}">{{ article_object.pk }} - {{ article_object.title }}</a>
+                <a href="{% url 'delete view' pk=article_object.pk %}"> Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
+
+<!-- if 'paginate_by' in 'ListView' -->
+{% if page_obj.has_previous %}
+    <a href="?page={{ page_obj.previous_page_number }}&search={{ search }}">&lt;</a>
+{% endif %}
+
+{{ page_obj.number }} / {{ paginator.num_pages }}
+
+{% if page_obj.has_next %}
+    <a href="?page={{ page_obj.next_page_number }}&search={{ search }}">&gt;</a>
+{% endif %}
