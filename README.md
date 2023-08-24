@@ -1,6 +1,6 @@
 # SoftUni - Python Web Framework - June 2023
 
-In this repository there are solutions to tasks from the Python Web Framework of the software academy of SoftUni University.
+In this repository there are solutions to tasks from the Python Web Framework course of the software academy of SoftUni University.
 
 https://softuni.bg/trainings/4110/python-web-framework-june-2023
 
